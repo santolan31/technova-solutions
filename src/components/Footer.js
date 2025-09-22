@@ -12,6 +12,12 @@ const Footer = ({ onNavigate }) => {
           block: 'start'
         });
       }
+    } else if (page === 'home') {
+      // Scroll to top of page (hero section)
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     } else {
       onNavigate(page);
     }
@@ -21,7 +27,7 @@ const Footer = ({ onNavigate }) => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-logo" onClick={() => handleNavigation('home')} style={{ cursor: 'pointer' }}>
+          <div className="footer-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
             <div className="logo">
               <div className="logo-icon">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">

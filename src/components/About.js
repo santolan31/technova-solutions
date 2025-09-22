@@ -75,7 +75,8 @@ const About = () => {
         <div className="about-hero">
           <h1 className="about-title">Sobre Nosotros</h1>
           <p className="about-subtitle">
-            Impulsando la innovación y transformando negocios con tecnología de vanguardia.
+            Desarrollamos soluciones tecnológicas que optimizan procesos empresariales 
+            y mejoran la eficiencia operativa de nuestros clientes.
           </p>
         </div>
 
@@ -90,10 +91,9 @@ const About = () => {
             </div>
             <h2 className="card-title">Misión</h2>
             <p className="card-description">
-              Empoderamos a nuestros clientes para alcanzar su máximo potencial a través de 
-              soluciones tecnológicas innovadoras y personalizadas. Nos enfocamos en crear 
-              software de alta calidad, intuitivo y eficiente que impulse el crecimiento 
-              y la transformación digital de las empresas.
+              Desarrollar software personalizado y soluciones tecnológicas que resuelvan 
+              problemas reales de nuestros clientes, mejorando su productividad y 
+              facilitando la toma de decisiones basada en datos.
             </p>
           </div>
 

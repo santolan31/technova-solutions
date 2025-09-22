@@ -32,8 +32,8 @@ const Contact = () => {
           <div className="contact-info">
             <h1 className="contact-title">Ponte en contacto</h1>
             <p className="contact-description">
-              Si tienes alguna pregunta o necesitas más información sobre nuestros servicios, 
-              no dudes en ponerte en contacto. Estamos aquí para ayudarte a impulsar tu próximo proyecto.
+              ¿Necesitas una solución tecnológica para tu empresa? Contáctanos para 
+              discutir tu proyecto y recibir una propuesta personalizada.
             </p>
             
             <div className="contact-details">

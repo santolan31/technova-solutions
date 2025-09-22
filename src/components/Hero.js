@@ -23,9 +23,9 @@ const Hero = () => {
             Impulsando la Transformación Digital de tu Empresa
           </h1>
           <p className="hero-description">
-            TechNova Solutions es tu aliado estratégico para la digitalización. 
-            Ofrecemos soluciones innovadoras, seguras y escalables para empresas 
-            que buscan crecer en la era digital.
+            Especialistas en desarrollo de software, consultoría tecnológica y 
+            transformación digital para empresas que buscan modernizar sus procesos 
+            y mejorar su competitividad.
           </p>
           <button onClick={handleScrollToServices} className="btn btn-primary hero-cta">
             Conoce Nuestros Servicios

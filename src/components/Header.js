@@ -12,6 +12,12 @@ const Header = ({ onNavigate, currentPage }) => {
           block: 'start'
         });
       }
+    } else if (page === 'home') {
+      // Scroll to top of page (hero section)
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     } else {
       onNavigate(page);
     }
@@ -21,7 +27,7 @@ const Header = ({ onNavigate, currentPage }) => {
     <header className="header">
       <div className="container">
         <div className="header-content">
-          <div className="logo" onClick={() => handleNavigation('home')} style={{ cursor: 'pointer' }}>
+          <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
             <div className="logo-icon">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" fill="#3B82F6" stroke="#60A5FA" strokeWidth="2"/>

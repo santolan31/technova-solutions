@@ -20,7 +20,7 @@ const Services = () => {
         </svg>
       ),
       title: "Desarrollo de Software y Apps",
-      description: "Creamos soluciones de software a medida, desde aplicaciones móviles hasta sistemas empresariales complejos, utilizando las últimas tecnologías."
+      description: "Desarrollo de aplicaciones web y móviles personalizadas, sistemas empresariales y soluciones de software adaptadas a las necesidades específicas de cada cliente."
     },
     {
       icon: (
@@ -30,7 +30,7 @@ const Services = () => {
         </svg>
       ),
       title: "Consultoría en Transformación Digital",
-      description: "Guiamos a tu empresa en el proceso de transformación digital, optimizando procesos y adoptando nuevas tecnologías."
+      description: "Asesoría especializada para modernizar procesos empresariales, implementar nuevas tecnologías y optimizar la operación digital de tu organización."
     },
     {
       icon: (
@@ -41,7 +41,7 @@ const Services = () => {
         </svg>
       ),
       title: "Ciberseguridad en la Nube",
-      description: "Protegemos tus datos y sistemas con soluciones de ciberseguridad avanzadas, garantizando la continuidad de tu negocio."
+      description: "Implementación de medidas de seguridad robustas para proteger información crítica, sistemas en la nube y garantizar el cumplimiento normativo."
     },
     {
       icon: (
@@ -52,7 +52,7 @@ const Services = () => {
         </svg>
       ),
       title: "Implementación de IA",
-      description: "Integramos soluciones de inteligencia artificial para automatizar tareas, analizar datos y mejorar la toma de decisiones."
+      description: "Desarrollo e integración de sistemas de IA para automatización de procesos, análisis predictivo y optimización de operaciones empresariales."
     },
     {
       icon: (
@@ -63,7 +63,7 @@ const Services = () => {
         </svg>
       ),
       title: "Soporte Técnico y Outsourcing IT",
-      description: "Ofrecemos soporte técnico especializado y servicios de outsourcing IT para que te enfoques en tu negocio."
+      description: "Soporte técnico 24/7, mantenimiento de infraestructura y servicios de outsourcing IT para optimizar la operación tecnológica de tu empresa."
     }
   ];
 
@@ -73,8 +73,8 @@ const Services = () => {
         <div className="services-header">
           <h2 className="services-title">Nuestros Servicios</h2>
           <p className="services-description">
-            En TechNova Solutions, combinamos experiencia técnica con una visión estratégica 
-            para ofrecerte soluciones que impulsan el crecimiento y la innovación en tu empresa.
+            Soluciones tecnológicas especializadas para empresas que buscan optimizar sus procesos 
+            y mantenerse competitivas en el mercado digital actual.
           </p>
         </div>
         
@@ -92,10 +92,10 @@ const Services = () => {
           <div className="service-card service-cta">
             <h3 className="service-title">Ver todos los servicios</h3>
             <p className="service-description">
-              Explora nuestra gama completa de soluciones tecnológicas.
+              Conoce más sobre nuestros servicios y solicita una cotización personalizada.
             </p>
             <button onClick={handleScrollToContact} className="btn btn-primary service-btn">
-              Explorar Servicios
+              Generar Cotización
             </button>
           </div>
         </div>
