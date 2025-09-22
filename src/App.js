@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <Header onNavigate={setCurrentPage} currentPage={currentPage} />
       {renderPage()}
-      <Footer onNavigate={setCurrentPage} />
+      <Footer onNavigate={setCurrentPage} currentPage={currentPage} />
     </div>
   );
 }
