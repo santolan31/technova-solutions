@@ -1,0 +1,124 @@
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #E2E8F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  font-size: 1.125rem;
+  padding: 16px 40px;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  
+  .cta-description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 80px 0;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+    margin-bottom: 32px;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 14px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 60px 0;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+  
+  .cta-description {
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+  
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 12px 28px;
+  }
+}
