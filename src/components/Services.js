@@ -117,7 +117,7 @@ const Services = () => {
           viewport={{ once: true }}
         >
           {services.map((service, index) => (
-            <motion.div key={index} className="col-lg-4 col-md-6" variants={cardVariants}>
+            <motion.div key={index} className="col-12 col-sm-6 col-lg-4" variants={cardVariants}>
               <motion.div 
                 className="card h-100 bg-dark border-primary"
                 whileHover={{ 
@@ -141,7 +141,7 @@ const Services = () => {
             </motion.div>
           ))}
           
-          <motion.div className="col-lg-4 col-md-6" variants={cardVariants}>
+          <motion.div className="col-12 col-sm-6 col-lg-4" variants={cardVariants}>
             <motion.div 
               className="card h-100 bg-primary border-primary"
               whileHover={{ 

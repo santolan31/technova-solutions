@@ -63,14 +63,14 @@ const Contact = () => {
     <div id="contacto" className="py-5">
       <div className="container">
         <motion.div 
-          className="row g-5"
+          className="row g-4 g-lg-5"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {/* Sección de Información de Contacto */}
-          <motion.div className="col-lg-6" variants={itemVariants}>
+          <motion.div className="col-12 col-lg-6" variants={itemVariants}>
             <motion.h1 
               className="display-4 fw-bold text-white mb-4"
               initial={{ opacity: 0, y: 30 }}
@@ -160,7 +160,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Formulario de Contacto */}
-          <motion.div className="col-lg-6" variants={formVariants}>
+          <motion.div className="col-12 col-lg-6" variants={formVariants}>
             <motion.div 
               className="card bg-dark border-primary"
               whileHover={{ 

@@ -125,13 +125,13 @@ const About = () => {
 
         {/* Mission, Vision, Values Section */}
         <motion.div 
-          className="row g-4 mb-5"
+          className="row g-3 g-md-4 mb-5"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div className="col-lg-4" variants={cardVariants}>
+          <motion.div className="col-12 col-md-6 col-lg-4" variants={cardVariants}>
             <motion.div 
               className="card h-100 bg-dark border-primary"
               whileHover={{ 
@@ -160,7 +160,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div className="col-lg-4" variants={cardVariants}>
+          <motion.div className="col-12 col-md-6 col-lg-4" variants={cardVariants}>
             <motion.div 
               className="card h-100 bg-dark border-primary"
               whileHover={{ 
@@ -190,7 +190,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div className="col-lg-4" variants={cardVariants}>
+          <motion.div className="col-12 col-md-12 col-lg-4" variants={cardVariants}>
             <motion.div 
               className="card h-100 bg-dark border-primary"
               whileHover={{ 
@@ -250,14 +250,14 @@ const About = () => {
         </motion.div>
         
         <motion.div 
-          className="row g-4"
+          className="row g-3 g-md-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {teamMembers.map((member, index) => (
-            <motion.div key={index} className="col-lg-3 col-md-6" variants={teamVariants}>
+            <motion.div key={index} className="col-6 col-md-4 col-lg-3" variants={teamVariants}>
               <motion.div 
                 className="card h-100 bg-dark border-primary"
                 whileHover={{ 

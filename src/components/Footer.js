@@ -69,32 +69,17 @@ const Footer = ({ onNavigate, currentPage }) => {
           </div>
           
           <div className="col-lg-4 col-md-6 mb-3 mb-lg-0">
-            <nav className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-              <button 
-                className="btn btn-link text-light text-decoration-none p-0"
-                onClick={() => handleNavigation('home')}
-              >
-                Inicio
-              </button>
-              <button 
-                className="btn btn-link text-light text-decoration-none p-0"
-                onClick={() => handleNavigation('services')}
-              >
-                Servicios
-              </button>
-              <button 
-                className="btn btn-link text-light text-decoration-none p-0"
-                onClick={() => handleNavigation('about')}
-              >
-                Nosotros
-              </button>
-              <button 
-                className="btn btn-link text-light text-decoration-none p-0"
-                onClick={() => handleNavigation('contact')}
-              >
-                Contacto
-              </button>
-            </nav>
+            <div className="text-center text-lg-start">
+              <h6 className="text-white mb-3">Información de Contacto</h6>
+              <p className="text-light mb-2">
+                <i className="bi bi-envelope me-2"></i>
+                info@technovasolutions.com
+              </p>
+              <p className="text-light mb-0">
+                <i className="bi bi-phone me-2"></i>
+                317 821 9112
+              </p>
+            </div>
           </div>
           
           <div className="col-lg-4 col-md-12">
