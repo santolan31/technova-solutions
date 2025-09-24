@@ -1,24 +1,52 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './CallToAction.css';
 
 const CallToAction = () => {
   return (
     <section className="py-5 bg-primary">
       <div className="container">
-        <div className="row justify-content-center text-center">
+        <motion.div 
+          className="row justify-content-center text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="col-lg-8">
-            <h2 className="display-5 fw-bold text-white mb-4">
+            <motion.h2 
+              className="display-5 fw-bold text-white mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Da el Próximo Paso hacia la Digitalización
-            </h2>
-            <p className="lead text-white mb-4">
+            </motion.h2>
+            <motion.p 
+              className="lead text-white mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               Descubre cómo TechNova Solutions puede transformar tu empresa. 
               Solicita una cotización hoy mismo y hablemos de tu proyecto.
-            </p>
-            <a href="#contacto" className="btn btn-light btn-lg">
+            </motion.p>
+            <motion.a 
+              href="#contacto" 
+              className="btn btn-light btn-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              viewport={{ once: true }}
+            >
               Contáctanos
-            </a>
+            </motion.a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

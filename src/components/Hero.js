@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Hero.css';
 
 const Hero = () => {
@@ -18,17 +19,35 @@ const Hero = () => {
       <div className="container position-relative z-1">
         <div className="row justify-content-center text-center">
           <div className="col-lg-8">
-            <h1 className="display-4 fw-bold text-white mb-4">
+            <motion.h1 
+              className="display-4 fw-bold text-white mb-4"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               Impulsando la Transformación Digital de tu Empresa
-            </h1>
-            <p className="lead text-light mb-4">
+            </motion.h1>
+            <motion.p 
+              className="lead text-light mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               Especialistas en desarrollo de software, consultoría tecnológica y 
               transformación digital para empresas que buscan modernizar sus procesos 
               y mejorar su competitividad.
-            </p>
-            <button onClick={handleScrollToServices} className="btn btn-primary btn-lg">
+            </motion.p>
+            <motion.button 
+              onClick={handleScrollToServices} 
+              className="btn btn-primary btn-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Conoce Nuestros Servicios
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>

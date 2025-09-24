@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Services.css';
 
 const Services = () => {
@@ -67,10 +68,38 @@ const Services = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="servicios" className="py-5">
       <div className="container">
-        <div className="row justify-content-center text-center mb-5">
+        <motion.div 
+          className="row justify-content-center text-center mb-5"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="col-lg-8">
             <h2 className="display-5 fw-bold text-white mb-3">Nuestros Servicios</h2>
             <p className="lead text-light">
@@ -78,37 +107,67 @@ const Services = () => {
               y mantenerse competitivas en el mercado digital actual.
             </p>
           </div>
-        </div>
+        </motion.div>
         
-        <div className="row g-4">
+        <motion.div 
+          className="row g-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {services.map((service, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
-              <div className="card h-100 bg-dark border-primary">
+            <motion.div key={index} className="col-lg-4 col-md-6" variants={cardVariants}>
+              <motion.div 
+                className="card h-100 bg-dark border-primary"
+                whileHover={{ 
+                  y: -10,
+                  transition: { duration: 0.3 }
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <div className="card-body text-center p-4">
-                  <div className="text-primary mb-3 d-flex justify-content-center">
+                  <motion.div 
+                    className="text-primary mb-3 d-flex justify-content-center"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     {service.icon}
-                  </div>
+                  </motion.div>
                   <h5 className="card-title text-white mb-3">{service.title}</h5>
                   <p className="card-text text-light">{service.description}</p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
           
-          <div className="col-lg-4 col-md-6">
-            <div className="card h-100 bg-primary border-primary">
+          <motion.div className="col-lg-4 col-md-6" variants={cardVariants}>
+            <motion.div 
+              className="card h-100 bg-primary border-primary"
+              whileHover={{ 
+                y: -10,
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
+              whileTap={{ scale: 0.98 }}
+            >
               <div className="card-body text-center p-4 d-flex flex-column justify-content-center">
                 <h5 className="card-title text-white mb-3">Ver todos los servicios</h5>
                 <p className="card-text text-white mb-4">
                   Conoce más sobre nuestros servicios y solicita una cotización personalizada.
                 </p>
-                <button onClick={handleScrollToContact} className="btn btn-light btn-lg">
+                <motion.button 
+                  onClick={handleScrollToContact} 
+                  className="btn btn-light btn-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   Generar Cotización
-                </button>
+                </motion.button>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
