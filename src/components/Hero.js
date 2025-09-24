@@ -13,23 +13,23 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero">
-      <div className="hero-background">
-        <div className="hero-overlay"></div>
-      </div>
-      <div className="container">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Impulsando la Transformación Digital de tu Empresa
-          </h1>
-          <p className="hero-description">
-            Especialistas en desarrollo de software, consultoría tecnológica y 
-            transformación digital para empresas que buscan modernizar sus procesos 
-            y mejorar su competitividad.
-          </p>
-          <button onClick={handleScrollToServices} className="btn btn-primary hero-cta">
-            Conoce Nuestros Servicios
-          </button>
+    <section className="position-relative min-vh-100 d-flex align-items-center" style={{backgroundImage: 'url(./assets/images/background.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+      <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+      <div className="container position-relative z-1">
+        <div className="row justify-content-center text-center">
+          <div className="col-lg-8">
+            <h1 className="display-4 fw-bold text-white mb-4">
+              Impulsando la Transformación Digital de tu Empresa
+            </h1>
+            <p className="lead text-light mb-4">
+              Especialistas en desarrollo de software, consultoría tecnológica y 
+              transformación digital para empresas que buscan modernizar sus procesos 
+              y mejorar su competitividad.
+            </p>
+            <button onClick={handleScrollToServices} className="btn btn-primary btn-lg">
+              Conoce Nuestros Servicios
+            </button>
+          </div>
         </div>
       </div>
     </section>

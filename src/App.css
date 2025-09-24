@@ -1,18 +1,4 @@
+/* App-specific styles that complement Bootstrap */
 .App {
   text-align: left;
-  background-color: #0A0F1B;
-  min-height: 100vh;
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 12px;
-  }
 }

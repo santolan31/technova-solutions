@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App bg-dark text-light min-vh-100">
       <Header onNavigate={setCurrentPage} currentPage={currentPage} />
       {renderPage()}
       <Footer onNavigate={setCurrentPage} currentPage={currentPage} />

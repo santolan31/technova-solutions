@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Custom styles that complement Bootstrap */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,44 +15,19 @@ code {
     monospace;
 }
 
-/* Global button styles */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 16px;
+/* Custom primary color override for Bootstrap */
+:root {
+  --bs-primary: #3B82F6;
+  --bs-primary-rgb: 59, 130, 246;
 }
 
-.btn-primary {
-  background-color: #3B82F6;
-  color: white;
-}
-
+/* Custom button hover effects */
 .btn-primary:hover {
-  background-color: #2563EB;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
+/* Custom link hover effects */
+.btn-link:hover {
+  color: #60A5FA !important;
 }

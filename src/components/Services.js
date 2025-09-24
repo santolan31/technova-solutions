@@ -68,35 +68,45 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicios" className="services">
+    <section id="servicios" className="py-5">
       <div className="container">
-        <div className="services-header">
-          <h2 className="services-title">Nuestros Servicios</h2>
-          <p className="services-description">
-            Soluciones tecnológicas especializadas para empresas que buscan optimizar sus procesos 
-            y mantenerse competitivas en el mercado digital actual.
-          </p>
+        <div className="row justify-content-center text-center mb-5">
+          <div className="col-lg-8">
+            <h2 className="display-5 fw-bold text-white mb-3">Nuestros Servicios</h2>
+            <p className="lead text-light">
+              Soluciones tecnológicas especializadas para empresas que buscan optimizar sus procesos 
+              y mantenerse competitivas en el mercado digital actual.
+            </p>
+          </div>
         </div>
         
-        <div className="services-grid">
+        <div className="row g-4">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="service-icon">
-                {service.icon}
+            <div key={index} className="col-lg-4 col-md-6">
+              <div className="card h-100 bg-dark border-primary">
+                <div className="card-body text-center p-4">
+                  <div className="text-primary mb-3 d-flex justify-content-center">
+                    {service.icon}
+                  </div>
+                  <h5 className="card-title text-white mb-3">{service.title}</h5>
+                  <p className="card-text text-light">{service.description}</p>
+                </div>
               </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
             </div>
           ))}
           
-          <div className="service-card service-cta">
-            <h3 className="service-title">Ver todos los servicios</h3>
-            <p className="service-description">
-              Conoce más sobre nuestros servicios y solicita una cotización personalizada.
-            </p>
-            <button onClick={handleScrollToContact} className="btn btn-primary service-btn">
-              Generar Cotización
-            </button>
+          <div className="col-lg-4 col-md-6">
+            <div className="card h-100 bg-primary border-primary">
+              <div className="card-body text-center p-4 d-flex flex-column justify-content-center">
+                <h5 className="card-title text-white mb-3">Ver todos los servicios</h5>
+                <p className="card-text text-white mb-4">
+                  Conoce más sobre nuestros servicios y solicita una cotización personalizada.
+                </p>
+                <button onClick={handleScrollToContact} className="btn btn-light btn-lg">
+                  Generar Cotización
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
