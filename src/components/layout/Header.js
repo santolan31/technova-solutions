@@ -82,7 +82,7 @@ const Header = ({ onNavigate, currentPage }) => {
           
           {/* Desktop Navigation */}
           <nav className="d-none d-lg-flex align-items-center gap-4">
-            {['home', 'services', 'about', 'contact', 'quote'].map((page, index) => (
+            {['home', 'services', 'about', 'contact'].map((page, index) => (
               <motion.button 
                 key={page}
                 className={`btn btn-link text-light text-decoration-none p-0 ${currentPage === page ? 'text-primary' : ''}`}
@@ -97,7 +97,6 @@ const Header = ({ onNavigate, currentPage }) => {
                 {page === 'services' && 'Servicios'}
                 {page === 'about' && 'Nosotros'}
                 {page === 'contact' && 'Contacto'}
-                {page === 'quote' && 'Cotización'}
               </motion.button>
             ))}
           </nav>
@@ -139,7 +138,7 @@ const Header = ({ onNavigate, currentPage }) => {
               transition={{ duration: 0.3 }}
             >
               <div className="d-flex flex-column gap-3">
-                {['home', 'services', 'about', 'contact', 'quote'].map((page, index) => (
+                {['home', 'services', 'about', 'contact'].map((page, index) => (
                   <motion.button
                     key={page}
                     className={`btn btn-link text-light text-decoration-none text-start p-2 ${currentPage === page ? 'text-primary' : ''}`}
@@ -154,7 +153,6 @@ const Header = ({ onNavigate, currentPage }) => {
                     {page === 'services' && 'Servicios'}
                     {page === 'about' && 'Nosotros'}
                     {page === 'contact' && 'Contacto'}
-                    {page === 'quote' && 'Cotización'}
                   </motion.button>
                 ))}
               </div>
