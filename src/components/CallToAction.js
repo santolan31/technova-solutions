@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './CallToAction.css';
 
 const CallToAction = () => {
   return (

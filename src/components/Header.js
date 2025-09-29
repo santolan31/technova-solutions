@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './Header.css';
 
 const Header = ({ onNavigate, currentPage }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

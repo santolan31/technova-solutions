@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Hero.css';
 
 const Hero = () => {
   const handleScrollToServices = () => {
