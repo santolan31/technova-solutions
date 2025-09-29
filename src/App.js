@@ -25,7 +25,7 @@ function App() {
           <>
             <Hero />
             <Services />
-            <CallToAction />
+            <CallToAction onNavigate={setCurrentPage} />
           </>
         );
     }

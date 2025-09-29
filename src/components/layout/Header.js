@@ -126,18 +126,6 @@ const Header = ({ onNavigate, currentPage }) => {
               </svg>
             </motion.button>
             
-            <motion.button 
-              className="btn btn-primary btn-sm d-md-none"
-              onClick={() => handleNavigation('quote')}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="d-none d-sm-inline">Solicitar Cotización</span>
-              <span className="d-inline d-sm-none">Cotización</span>
-            </motion.button>
             
             <motion.button 
               className="btn btn-primary d-none d-md-block"
@@ -164,7 +152,7 @@ const Header = ({ onNavigate, currentPage }) => {
               transition={{ duration: 0.3 }}
             >
               <div className="d-flex flex-column gap-3">
-                {['home', 'services', 'about', 'contact'].map((page, index) => (
+                {['home', 'services', 'about', 'contact', 'quote'].map((page, index) => (
                   <motion.button
                     key={page}
                     className={`btn btn-link text-light text-decoration-none text-start p-2 ${currentPage === page ? 'text-primary' : ''}`}
@@ -179,6 +167,7 @@ const Header = ({ onNavigate, currentPage }) => {
                     {page === 'services' && 'Servicios'}
                     {page === 'about' && 'Nosotros'}
                     {page === 'contact' && 'Contacto'}
+                    {page === 'quote' && 'Cotización'}
                   </motion.button>
                 ))}
               </div>

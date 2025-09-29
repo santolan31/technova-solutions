@@ -1,7 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const CallToAction = () => {
+const CallToAction = ({ onNavigate }) => {
+  const handleClick = () => {
+    if (onNavigate) {
+      onNavigate('quote');
+    } else {
+      // Fallback para scroll si no hay navegación
+      const contactSection = document.getElementById('contacto');
+      if (contactSection) {
+        contactSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  };
   return (
     <section className="py-5 bg-primary">
       <div className="container">
@@ -32,8 +46,8 @@ const CallToAction = () => {
               Descubre cómo TechNova Solutions puede transformar tu empresa. 
               Solicita una cotización hoy mismo y hablemos de tu proyecto.
             </motion.p>
-            <motion.a 
-              href="#contacto" 
+            <motion.button 
+              onClick={handleClick}
               className="btn btn-light btn-lg"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -42,8 +56,9 @@ const CallToAction = () => {
               whileTap={{ scale: 0.95 }}
               viewport={{ once: true }}
             >
-              Contáctanos
-            </motion.a>
+              <span className="d-none d-md-inline">Contáctanos</span>
+              <span className="d-inline d-md-none">Solicitar Cotización</span>
+            </motion.button>
           </div>
         </motion.div>
       </div>
