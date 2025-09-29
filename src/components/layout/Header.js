@@ -63,11 +63,20 @@ const Header = ({ onNavigate, currentPage }) => {
             whileTap={{ scale: 0.95 }}
           >
             <motion.div 
-              className="me-3"
+              className="me-2 me-md-3"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" className="d-md-none">
+                <circle cx="16" cy="16" r="14" fill="#3B82F6" stroke="#60A5FA" strokeWidth="2"/>
+                <circle cx="16" cy="16" r="8" fill="none" stroke="white" strokeWidth="2"/>
+                <circle cx="16" cy="16" r="3" fill="white"/>
+                <circle cx="10" cy="10" r="2" fill="white"/>
+                <circle cx="22" cy="10" r="2" fill="white"/>
+                <circle cx="10" cy="22" r="2" fill="white"/>
+                <circle cx="22" cy="22" r="2" fill="white"/>
+              </svg>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="d-none d-md-block">
                 <circle cx="16" cy="16" r="14" fill="#3B82F6" stroke="#60A5FA" strokeWidth="2"/>
                 <circle cx="16" cy="16" r="8" fill="none" stroke="white" strokeWidth="2"/>
                 <circle cx="16" cy="16" r="3" fill="white"/>
@@ -77,7 +86,8 @@ const Header = ({ onNavigate, currentPage }) => {
                 <circle cx="22" cy="22" r="2" fill="white"/>
               </svg>
             </motion.div>
-            <span className="h5 mb-0 text-white fw-bold">TechNova Solutions</span>
+            <span className="h6 h5-md mb-0 text-white fw-bold d-none d-sm-block">TechNova Solutions</span>
+            <span className="h6 mb-0 text-white fw-bold d-block d-sm-none">TechNova</span>
           </motion.div>
           
           {/* Desktop Navigation */}
@@ -101,30 +111,46 @@ const Header = ({ onNavigate, currentPage }) => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="btn btn-outline-primary d-lg-none"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            whileTap={{ scale: 0.95 }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </motion.button>
-          
-          <motion.button 
-            className="btn btn-primary"
-            onClick={() => handleNavigation('quote')}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Solicitar Cotización
-          </motion.button>
+          {/* Right Side Buttons */}
+          <div className="d-flex align-items-center gap-2">
+            {/* Mobile Menu Button */}
+            <motion.button
+              className="btn btn-outline-primary d-lg-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.button>
+            
+            <motion.button 
+              className="btn btn-primary btn-sm d-md-none"
+              onClick={() => handleNavigation('quote')}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="d-none d-sm-inline">Solicitar Cotización</span>
+              <span className="d-inline d-sm-none">Cotización</span>
+            </motion.button>
+            
+            <motion.button 
+              className="btn btn-primary d-none d-md-block"
+              onClick={() => handleNavigation('quote')}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Solicitar Cotización
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
