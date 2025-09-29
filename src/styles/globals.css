@@ -1,4 +1,9 @@
 /* Custom styles that complement Bootstrap */
+
+/* App-specific styles */
+.App {
+  text-align: left;
+}
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

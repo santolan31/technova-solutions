@@ -1,12 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Services = ({ onNavigate }) => {
-  const handleNavigateToQuote = () => {
-    if (onNavigate) {
-      onNavigate('quote');
-    }
-  };
+const Services = () => {
   const services = [
     {
       icon: (
@@ -136,32 +131,6 @@ const Services = ({ onNavigate }) => {
             </motion.div>
           ))}
           
-          <motion.div className="col-12 col-sm-6 col-lg-4" variants={cardVariants}>
-            <motion.div 
-              className="card h-100 bg-primary border-primary"
-              whileHover={{ 
-                y: -10,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div className="card-body text-center p-4 d-flex flex-column justify-content-center">
-                <h5 className="card-title text-white mb-3">Ver todos los servicios</h5>
-                <p className="card-text text-white mb-4">
-                  Conoce más sobre nuestros servicios y solicita una cotización personalizada.
-                </p>
-                <motion.button 
-                  onClick={handleNavigateToQuote} 
-                  className="btn btn-light btn-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Generar Cotización
-                </motion.button>
-              </div>
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import CallToAction from './components/CallToAction';
-import Contact from './components/Contact';
-import About from './components/About';
-import Quote from './components/Quote';
-import Footer from './components/Footer';
-import './App.css';
+import Header from './components/layout/Header';
+import Hero from './components/layout/Hero';
+import Services from './components/pages/Services';
+import CallToAction from './components/layout/CallToAction';
+import Contact from './components/pages/Contact';
+import About from './components/pages/About';
+import Quote from './components/pages/Quote/Quote';
+import Footer from './components/layout/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -25,7 +24,7 @@ function App() {
         return (
           <>
             <Hero />
-            <Services onNavigate={setCurrentPage} />
+            <Services />
             <CallToAction />
           </>
         );
