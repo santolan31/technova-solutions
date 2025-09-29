@@ -157,17 +157,6 @@ const Header = ({ onNavigate, currentPage }) => {
                     {page === 'quote' && 'Cotización'}
                   </motion.button>
                 ))}
-                <motion.button
-                  className="btn btn-primary mt-2"
-                  onClick={() => handleNavigation('quote')}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.4 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Solicitar Cotización
-                </motion.button>
               </div>
             </motion.div>
           )}
