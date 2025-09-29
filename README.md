@@ -11,6 +11,7 @@ Este proyecto implementa un sitio web de una página (SPA) con navegación diná
 - **Navegación dinámica**: Sistema de routing interno para cambiar entre páginas sin recarga
 - **Scroll suave**: Navegación fluida entre secciones de la página principal
 - **Formulario de contacto**: Implementación funcional con validación básica
+- **Sistema de cotización**: Generador de cotizaciones con múltiples monedas y cálculos automáticos
 - **Diseño responsive**: Adaptación automática para dispositivos móviles, tablets y desktop
 - **Background personalizado**: Imagen de fondo optimizada para la sección hero
 
@@ -20,6 +21,7 @@ Este proyecto implementa un sitio web de una página (SPA) con navegación diná
 - **Frontend**: React 18.2.0
 - **Build Tool**: Create React App
 - **Styling**: CSS3 puro con Flexbox y Grid
+- **Animations**: Framer Motion para transiciones suaves
 - **Fonts**: Inter (Google Fonts)
 - **Deployment**: GitHub Pages
 
@@ -31,6 +33,7 @@ src/
 │   ├── Header.js/css          # Navegación principal con estado activo
 │   ├── Hero.js/css            # Sección principal con background personalizado
 │   ├── Services.js/css        # Grid de servicios con 6 tarjetas
+│   ├── Quote.js/css           # Sistema de cotización con múltiples monedas
 │   ├── CallToAction.js/css    # Sección CTA con gradientes
 │   ├── Contact.js/css         # Página de contacto con formulario
 │   ├── About.js/css           # Página sobre nosotros con equipo
@@ -44,6 +47,7 @@ src/
 El proyecto utiliza React hooks para manejar:
 - **Estado de navegación**: `useState` para controlar la página activa
 - **Formulario de contacto**: Estado local para campos del formulario
+- **Sistema de cotización**: Estado para servicios seleccionados, monedas y formularios
 - **Navegación por scroll**: `document.getElementById` para scroll programático
 
 ## Instalación y Desarrollo
@@ -116,11 +120,40 @@ El proyecto está configurado para desplegarse automáticamente en GitHub Pages:
 
 ## Servicios Implementados
 
-1. **Desarrollo de Software y Apps** - Soluciones de software personalizado
-2. **Consultoría en Transformación Digital** - Asesoría estratégica
-3. **Ciberseguridad en la Nube** - Protección de datos y sistemas
-4. **Implementación de IA** - Soluciones de inteligencia artificial
-5. **Soporte Técnico y Outsourcing IT** - Servicios de soporte especializado
+1. **Desarrollo de Software y Apps** - Soluciones de software personalizado ($1,500 - 4-6 semanas)
+2. **Consultoría en Transformación Digital** - Asesoría estratégica ($2,000 - 2-3 semanas)
+3. **Ciberseguridad en la Nube** - Protección de datos y sistemas ($2,500 - 3-4 semanas)
+4. **Implementación de IA** - Soluciones de inteligencia artificial ($3,000 - 6-8 semanas)
+5. **Soporte Técnico** - Servicios de soporte especializado ($1,200 - 1-2 semanas)
+6. **Outsourcing IT** - Externalización de servicios IT ($1,800 - 2-4 semanas)
+
+## Sistema de Cotización
+
+### Características del Generador de Cotizaciones
+
+- **Selección de Servicios**: Interfaz visual para seleccionar múltiples servicios
+- **Múltiples Monedas**: Soporte para USD, EUR, COP, MXN, GBP con conversión automática
+- **Cálculos Automáticos**: 
+  - Subtotal por servicios seleccionados
+  - Descuento del 5% por 3+ servicios
+  - IVA del 19% aplicado al subtotal con descuento
+  - Total final calculado automáticamente
+- **Estimación de Tiempo**: Cálculo automático basado en el servicio con mayor duración
+- **Formulario de Contacto**: Captura de datos del cliente para procesamiento
+- **Acciones Disponibles**: 
+  - Descarga de PDF (en desarrollo)
+  - Envío por correo (en desarrollo)
+  - Solicitud de cotización formal (en desarrollo)
+
+### Monedas Soportadas
+
+| Moneda | Símbolo | Tasa de Cambio (Aprox.) |
+|--------|---------|-------------------------|
+| USD    | $       | 1.00 (Base)            |
+| EUR    | €       | 0.85                   |
+| COP    | $       | 4,100                  |
+| MXN    | $       | 17.5                   |
+| GBP    | £       | 0.78                   |
 
 ## Despliegue y Configuración
 
@@ -157,11 +190,14 @@ npm run deploy
 - Sistema de navegación dinámico
 - Página de contacto con formulario funcional
 - Página "Sobre Nosotros" con información corporativa
+- **Sistema de cotización completo** con múltiples monedas y cálculos automáticos
 - Diseño responsive completo
 - Optimización para producción
 
 ### Próximas Iteraciones 🔄
+- Implementación de descarga de PDF para cotizaciones
+- Integración con servicio de correo para envío automático
 - Casos de éxito con portfolio de proyectos
 - Blog/Noticias con CMS básico
-- Integración con backend para formularios
+- Integración con backend para formularios y procesamiento de cotizaciones
 - Analytics y métricas de rendimiento

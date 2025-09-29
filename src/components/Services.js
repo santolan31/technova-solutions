@@ -2,14 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Services.css';
 
-const Services = () => {
-  const handleScrollToContact = () => {
-    const contactSection = document.getElementById('contacto');
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+const Services = ({ onNavigate }) => {
+  const handleNavigateToQuote = () => {
+    if (onNavigate) {
+      onNavigate('quote');
     }
   };
   const services = [
@@ -157,7 +153,7 @@ const Services = () => {
                   Conoce más sobre nuestros servicios y solicita una cotización personalizada.
                 </p>
                 <motion.button 
-                  onClick={handleScrollToContact} 
+                  onClick={handleNavigateToQuote} 
                   className="btn btn-light btn-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

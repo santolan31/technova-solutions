@@ -5,6 +5,7 @@ import Services from './components/Services';
 import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import About from './components/About';
+import Quote from './components/Quote';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -17,12 +18,14 @@ function App() {
         return <Contact />;
       case 'about':
         return <About />;
+      case 'quote':
+        return <Quote />;
       case 'home':
       default:
         return (
           <>
             <Hero />
-            <Services />
+            <Services onNavigate={setCurrentPage} />
             <CallToAction />
           </>
         );
