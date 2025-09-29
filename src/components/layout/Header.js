@@ -115,7 +115,7 @@ const Header = ({ onNavigate, currentPage }) => {
           </motion.button>
           
           <motion.button 
-            className="btn btn-primary d-none d-lg-block"
+            className="btn btn-primary"
             onClick={() => handleNavigation('quote')}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
