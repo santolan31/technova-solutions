@@ -6,7 +6,6 @@ const CallToAction = ({ onNavigate }) => {
     if (onNavigate) {
       onNavigate('quote');
     } else {
-      // Fallback para scroll si no hay navegación
       const contactSection = document.getElementById('contacto');
       if (contactSection) {
         contactSection.scrollIntoView({ 

@@ -13,7 +13,6 @@ const Quote = () => {
     comments: ''
   });
 
-  // Configuración de servicios con precios base en USD y tiempos de entrega
   const servicesData = [
     {
       id: 1,
@@ -99,7 +98,6 @@ const Quote = () => {
     }
   ];
 
-  // Configuración de monedas con tasas de cambio aproximadas
   const currencies = {
     USD: { symbol: '$', name: 'Dólar Estadounidense', rate: 1 },
     EUR: { symbol: '€', name: 'Euro', rate: 0.85 },
@@ -108,13 +106,11 @@ const Quote = () => {
     GBP: { symbol: '£', name: 'Libra Esterlina', rate: 0.78 }
   };
 
-  // Función para calcular precios convertidos
   const getConvertedPrice = (basePrice) => {
     const rate = currencies[selectedCurrency].rate;
     return Math.round(basePrice * rate);
   };
 
-  // Función para formatear precios
   const formatPrice = (price) => {
     const symbol = currencies[selectedCurrency].symbol;
     if (selectedCurrency === 'COP') {
@@ -123,20 +119,18 @@ const Quote = () => {
     return `${symbol}${price.toLocaleString()}`;
   };
 
-  // Cálculos de cotización
   const subtotal = selectedServices.reduce((sum, serviceId) => {
     const service = servicesData.find(s => s.id === serviceId);
     return sum + getConvertedPrice(service.basePrice);
   }, 0);
 
-  const discountRate = selectedServices.length >= 3 ? 0.05 : 0; // 5% descuento por 3+ servicios
+  const discountRate = selectedServices.length >= 3 ? 0.05 : 0;
   const discount = subtotal * discountRate;
   const subtotalAfterDiscount = subtotal - discount;
-  const taxRate = 0.19; // 19% IVA
+  const taxRate = 0.19;
   const tax = subtotalAfterDiscount * taxRate;
   const total = subtotalAfterDiscount + tax;
 
-  // Función para calcular tiempo de entrega estimado
   const getEstimatedDeliveryTime = () => {
     if (selectedServices.length === 0) return "N/A";
     
@@ -145,7 +139,6 @@ const Quote = () => {
       return service.deliveryTime;
     });
 
-    // Lógica simple: tomar el tiempo más largo como estimación
     const maxWeeks = Math.max(...deliveryTimes.map(time => {
       const weeks = time.match(/(\d+)/g);
       return weeks ? Math.max(...weeks.map(Number)) : 0;
@@ -154,7 +147,6 @@ const Quote = () => {
     return `${maxWeeks}+ semanas`;
   };
 
-  // Manejar selección de servicios
   const toggleService = (serviceId) => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
@@ -163,7 +155,6 @@ const Quote = () => {
     );
   };
 
-  // Manejar cambios en el formulario
   const handleFormChange = (e) => {
     setContactForm({
       ...contactForm,
@@ -171,28 +162,20 @@ const Quote = () => {
     });
   };
 
-  // Manejar envío de cotización
   const handleSubmitQuote = (e) => {
     e.preventDefault();
-    // Aquí iría la lógica para enviar la cotización
     alert('Cotización enviada exitosamente. Nos pondremos en contacto contigo pronto.');
   };
 
-  // Manejar descarga de PDF
   const handleDownloadPDF = () => {
-    // Aquí iría la lógica para generar y descargar PDF
     alert('Funcionalidad de descarga PDF en desarrollo');
   };
 
-  // Manejar envío por correo
   const handleSendEmail = () => {
-    // Aquí iría la lógica para enviar por correo
     alert('Funcionalidad de envío por correo en desarrollo');
   };
 
-  // Manejar solicitud formal
   const handleFormalRequest = () => {
-    // Aquí iría la lógica para solicitud formal
     alert('Funcionalidad de solicitud formal en desarrollo');
   };
 

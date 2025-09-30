@@ -7,10 +7,8 @@ const Header = ({ onNavigate, currentPage }) => {
   const handleNavigation = (page) => {
     setIsMobileMenuOpen(false);
     if (page === 'services') {
-      // First navigate to home page if not already there
       if (currentPage !== 'home') {
         onNavigate('home');
-        // Wait for page to load then scroll
         setTimeout(() => {
           const servicesSection = document.getElementById('servicios');
           if (servicesSection) {
@@ -21,7 +19,6 @@ const Header = ({ onNavigate, currentPage }) => {
           }
         }, 100);
       } else {
-        // Already on home page, just scroll
         const servicesSection = document.getElementById('servicios');
         if (servicesSection) {
           servicesSection.scrollIntoView({ 
@@ -31,11 +28,9 @@ const Header = ({ onNavigate, currentPage }) => {
         }
       }
     } else if (page === 'home') {
-      // First navigate to home page if not already there
       if (currentPage !== 'home') {
         onNavigate('home');
       } else {
-        // Already on home page, scroll to top
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
@@ -90,7 +85,6 @@ const Header = ({ onNavigate, currentPage }) => {
             <span className="h6 mb-0 text-white fw-bold d-block d-sm-none">TechNova</span>
           </motion.div>
           
-          {/* Desktop Navigation */}
           <nav className="d-none d-lg-flex align-items-center gap-4">
             {['home', 'services', 'about', 'contact'].map((page, index) => (
               <motion.button 
@@ -111,9 +105,7 @@ const Header = ({ onNavigate, currentPage }) => {
             ))}
           </nav>
 
-          {/* Right Side Buttons */}
           <div className="d-flex align-items-center gap-2">
-            {/* Mobile Menu Button */}
             <motion.button
               className="btn btn-outline-primary d-lg-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -141,7 +133,6 @@ const Header = ({ onNavigate, currentPage }) => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div

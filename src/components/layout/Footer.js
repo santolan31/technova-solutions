@@ -3,10 +3,8 @@ import React from 'react';
 const Footer = ({ onNavigate, currentPage }) => {
   const handleNavigation = (page) => {
     if (page === 'services') {
-      // First navigate to home page if not already there
       if (currentPage !== 'home') {
         onNavigate('home');
-        // Wait for page to load then scroll
         setTimeout(() => {
           const servicesSection = document.getElementById('servicios');
           if (servicesSection) {
@@ -17,7 +15,6 @@ const Footer = ({ onNavigate, currentPage }) => {
           }
         }, 100);
       } else {
-        // Already on home page, just scroll
         const servicesSection = document.getElementById('servicios');
         if (servicesSection) {
           servicesSection.scrollIntoView({ 
@@ -27,7 +24,6 @@ const Footer = ({ onNavigate, currentPage }) => {
         }
       }
     } else if (page === 'home') {
-      // First navigate to home page if not already there
       if (currentPage !== 'home') {
         onNavigate('home');
       } else {
