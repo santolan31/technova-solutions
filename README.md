@@ -24,7 +24,7 @@ Este proyecto implementa un sitio web de una página (SPA) con navegación diná
 - **Styling**: Bootstrap 5 + CSS3 personalizado con Flexbox y Grid
 - **Animations**: Framer Motion para transiciones suaves
 - **Fonts**: Inter (Google Fonts)
-- **Deployment**: GitHub Pages con auto-deploy
+- **Deployment**: Vercel (recomendado) + GitHub Pages
 
 
 ### Estructura de Componentes
@@ -110,8 +110,38 @@ npm run deploy
 
 ## Configuración de Despliegue
 
+### Vercel (Recomendado)
+El proyecto está optimizado para despliegue en Vercel con configuración automática:
+
+#### Configuración Automática
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Desplegar desde el directorio del proyecto
+vercel
+
+# Para producción
+vercel --prod
+```
+
+#### Configuración Manual en Vercel Dashboard
+1. Conectar repositorio de GitHub
+2. Framework Preset: **Create React App**
+3. Build Command: `npm run build`
+4. Output Directory: `build`
+5. Install Command: `npm install`
+
+#### Ventajas de Vercel
+- ✅ **Despliegue automático** desde GitHub
+- ✅ **CDN global** para mejor rendimiento
+- ✅ **HTTPS automático** con certificados SSL
+- ✅ **Preview deployments** para cada PR
+- ✅ **Analytics integrado** y métricas de rendimiento
+- ✅ **Zero-config** para React apps
+
 ### GitHub Pages
-El proyecto está configurado para desplegarse automáticamente en GitHub Pages:
+El proyecto también está configurado para desplegarse automáticamente en GitHub Pages:
 
 ```json
 {
