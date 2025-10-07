@@ -157,6 +157,13 @@ El proyecto también está configurado para desplegarse automáticamente en GitH
 - **NODE_ENV**: Configurado automáticamente por Create React App
 - **PUBLIC_URL**: Configurado para GitHub Pages subdirectory
 
+
+## Inicio
+
+1. **Solicitar Cotización**
+2. **Conoce Nuestros Servicios**
+
+
 ## Servicios Implementados
 
 1. **Desarrollo de Software y Apps** - Soluciones de software personalizado ($1,500 - 4-6 semanas)
@@ -165,6 +172,29 @@ El proyecto también está configurado para desplegarse automáticamente en GitH
 4. **Implementación de IA** - Soluciones de inteligencia artificial ($3,000 - 6-8 semanas)
 5. **Soporte Técnico** - Servicios de soporte especializado ($1,200 - 1-2 semanas)
 6. **Outsourcing IT** - Externalización de servicios IT ($1,800 - 2-4 semanas)
+
+## Nosotros
+
+1. **Misión**
+  -Desarrollar software personalizado y soluciones tecnológicas que resuelvan problemas reales de nuestros clientes, mejorando su productividad y facilitando la      toma de decisiones basada en datos.
+3. **Visión**
+   -Ser reconocidos como el socio tecnológico estratégico y líder en innovación que inspire confianza y entregue resultados excepcionales. Aspiramos a ser la          fuerza impulsora detrás de la transformación digital global, creando un impacto positivo y duradero en la forma en que las empresas operan y crecen.
+4. **Valores**
+   -Innovación, Integridad, Colaboración, Excelencia, Pasión
+5. **Nuestro Equipo de trabajo**
+   -Laura Camila Hernandez Neira, Santiago Salazar Lesmes, Niver Chilatra Mendoza, Katherine Lopez Yepes
+
+## Contacto
+
+1. **Correo Electronico**info@technovasolutions.com, 3178219112, Linkedin, X.com
+   - info@technovasolutions.com
+2. **Teléfono**
+   -317 821 9112
+3. **Enviar Mensaje**
+   - Nombre Completo
+   - Correo Electrónico
+   - Teléfono
+   - Mensaje
 
 ## Sistema de Cotización
 
