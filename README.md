@@ -219,6 +219,7 @@ npm run deploy
 2. Source: "Deploy from a branch"
 3. Branch: "gh-pages"
 4. Folder: "/ (root)"
+5. docs: update README with CO₂ regulation info
 
 **URL de producción**: `https://santiagosalazar.github.io/technova-solutions`
 
