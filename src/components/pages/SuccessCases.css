@@ -258,6 +258,11 @@
   
   .case-title {
     font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  .case-client {
+    font-size: 0.9rem;
   }
   
   .filters-container {
@@ -268,9 +273,43 @@
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
   }
+  
+  .project-info {
+    padding: 0.75rem;
+  }
+  
+  .info-item {
+    margin-bottom: 0.75rem;
+  }
+  
+  .technologies .badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .challenge p, .solution p {
+    font-size: 0.85rem;
+  }
+  
+  .results-list li {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .testimonial {
+    padding: 1rem;
+  }
+  
+  .testimonial blockquote p {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 576px) {
+  .success-cases-container {
+    padding: 1rem 0;
+  }
+  
   .case-header {
     padding: 1rem;
   }
@@ -279,18 +318,188 @@
     padding: 1rem;
   }
   
+  .case-title {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  
+  .case-client {
+    font-size: 0.85rem;
+  }
+  
+  .case-badge {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  
+  .case-badge .badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .project-info {
+    padding: 0.5rem;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .info-label {
+    font-size: 0.8rem;
+  }
+  
+  .info-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .technologies h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .technologies .badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+    margin: 0.1rem;
+  }
+  
+  .challenge h6, .solution h6, .results h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .challenge p, .solution p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .results-list li {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .testimonial {
+    padding: 0.75rem;
+  }
+  
+  .testimonial blockquote p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .testimonial .blockquote-footer {
+    font-size: 0.75rem;
+  }
+  
   .stat-item h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+  
+  .filters-container {
+    margin-bottom: 1.5rem;
   }
   
   .filters-container .d-flex {
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
   }
   
   .filters-container .btn {
     width: 100%;
-    max-width: 200px;
-    margin-bottom: 0.5rem;
+    max-width: 250px;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-cases-container {
+    padding: 0.5rem 0;
+  }
+  
+  .case-header {
+    padding: 0.75rem;
+  }
+  
+  .case-content {
+    padding: 0.75rem;
+  }
+  
+  .case-title {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+  
+  .case-client {
+    font-size: 0.8rem;
+  }
+  
+  .project-info {
+    padding: 0.4rem;
+  }
+  
+  .info-item {
+    gap: 0.2rem;
+  }
+  
+  .info-label {
+    font-size: 0.75rem;
+  }
+  
+  .info-value {
+    font-size: 0.8rem;
+  }
+  
+  .technologies h6 {
+    font-size: 0.85rem;
+  }
+  
+  .technologies .badge {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.4rem;
+  }
+  
+  .challenge h6, .solution h6, .results h6 {
+    font-size: 0.85rem;
+  }
+  
+  .challenge p, .solution p {
+    font-size: 0.75rem;
+  }
+  
+  .results-list li {
+    font-size: 0.75rem;
+  }
+  
+  .testimonial {
+    padding: 0.5rem;
+  }
+  
+  .testimonial blockquote p {
+    font-size: 0.75rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.85rem;
+  }
+  
+  .filters-container .btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.8rem;
   }
 }
