@@ -86,7 +86,7 @@ const Header = ({ onNavigate, currentPage }) => {
           </motion.div>
           
           <nav className="d-none d-lg-flex align-items-center gap-4">
-            {['home', 'services', 'about', 'contact'].map((page, index) => (
+            {['home', 'services', 'about', 'success-cases', 'contact'].map((page, index) => (
               <motion.button 
                 key={page}
                 className={`btn btn-link text-light text-decoration-none p-0 ${currentPage === page ? 'text-primary' : ''}`}
@@ -100,6 +100,7 @@ const Header = ({ onNavigate, currentPage }) => {
                 {page === 'home' && 'Inicio'}
                 {page === 'services' && 'Servicios'}
                 {page === 'about' && 'Nosotros'}
+                {page === 'success-cases' && 'Casos de Éxito'}
                 {page === 'contact' && 'Contacto'}
               </motion.button>
             ))}
@@ -143,7 +144,7 @@ const Header = ({ onNavigate, currentPage }) => {
               transition={{ duration: 0.3 }}
             >
               <div className="d-flex flex-column gap-3">
-                {['home', 'services', 'about', 'contact', 'quote'].map((page, index) => (
+                {['home', 'services', 'about', 'success-cases', 'contact', 'quote'].map((page, index) => (
                   <motion.button
                     key={page}
                     className={`btn btn-link text-light text-decoration-none text-start p-2 ${currentPage === page ? 'text-primary' : ''}`}
@@ -157,6 +158,7 @@ const Header = ({ onNavigate, currentPage }) => {
                     {page === 'home' && 'Inicio'}
                     {page === 'services' && 'Servicios'}
                     {page === 'about' && 'Nosotros'}
+                    {page === 'success-cases' && 'Casos de Éxito'}
                     {page === 'contact' && 'Contacto'}
                     {page === 'quote' && 'Cotización'}
                   </motion.button>

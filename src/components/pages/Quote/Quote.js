@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Quote.css';
+import { downloadQuotePDF } from '../../../utils/pdfGenerator';
+import { sendQuoteWithPDF } from '../../../services/emailService';
 
 const Quote = () => {
   const [selectedServices, setSelectedServices] = useState([]);
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
+  const [isLoading, setIsLoading] = useState(false);
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
@@ -168,11 +171,71 @@ const Quote = () => {
   };
 
   const handleDownloadPDF = () => {
-    alert('Funcionalidad de descarga PDF en desarrollo');
+    if (selectedServices.length === 0) {
+      alert('Por favor selecciona al menos un servicio antes de descargar la cotización');
+      return;
+    }
+    
+    if (!contactForm.name || !contactForm.email) {
+      alert('Por favor completa tu nombre y email antes de descargar la cotización');
+      return;
+    }
+
+    try {
+      const quoteData = {
+        selectedServices,
+        total,
+        subtotal,
+        discount,
+        tax,
+        estimatedDeliveryTime: getEstimatedDeliveryTime(),
+        currency: selectedCurrency
+      };
+      
+      downloadQuotePDF(quoteData, contactForm, selectedServices, servicesData, currencies, selectedCurrency);
+    } catch (error) {
+      console.error('Error generando PDF:', error);
+      alert('Error al generar el PDF. Por favor intenta de nuevo.');
+    }
   };
 
-  const handleSendEmail = () => {
-    alert('Funcionalidad de envío por correo en desarrollo');
+  const handleSendEmail = async () => {
+    if (selectedServices.length === 0) {
+      alert('Por favor selecciona al menos un servicio antes de enviar la cotización');
+      return;
+    }
+    
+    if (!contactForm.name || !contactForm.email) {
+      alert('Por favor completa tu nombre y email antes de enviar la cotización');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const quoteData = {
+        selectedServices,
+        total,
+        subtotal,
+        discount,
+        tax,
+        estimatedDeliveryTime: getEstimatedDeliveryTime(),
+        currency: selectedCurrency
+      };
+
+      const result = await sendQuoteWithPDF(contactForm, selectedServices, servicesData, currencies, selectedCurrency, quoteData);
+      
+      if (result.success) {
+        alert(result.message);
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error('Error enviando email:', error);
+      alert('Error al enviar la cotización por correo. Por favor intenta de nuevo.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleFormalRequest = () => {
@@ -416,10 +479,18 @@ const Quote = () => {
                 <motion.button 
                   className="btn btn-outline-primary mb-2"
                   onClick={handleSendEmail}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  disabled={isLoading}
+                  whileHover={{ scale: isLoading ? 1 : 1.05 }}
+                  whileTap={{ scale: isLoading ? 1 : 0.95 }}
                 >
-                  ✉️ Enviar por Correo
+                  {isLoading ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Enviando...
+                    </>
+                  ) : (
+                    '✉️ Enviar por Correo'
+                  )}
                 </motion.button>
                 <motion.button 
                   className="btn btn-primary"

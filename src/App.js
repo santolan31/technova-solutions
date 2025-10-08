@@ -6,6 +6,7 @@ import CallToAction from './components/layout/CallToAction';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Quote from './components/pages/Quote/Quote';
+import SuccessCases from './components/pages/SuccessCases';
 import Footer from './components/layout/Footer';
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         return <About />;
       case 'quote':
         return <Quote />;
+      case 'success-cases':
+        return <SuccessCases />;
       case 'home':
       default:
         return (
